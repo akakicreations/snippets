@@ -196,8 +196,9 @@ background+points
 ## Create themes
 
 ```python
-# Incluir temas a los gráficos
+
 # Primero crear un archivo de configuración
+
 config = {'arc': {'fill': '#30a2da'}, 
 'area': {'fill': 'black'}, 
 'axisBand': {'grid': False}, 
@@ -294,10 +295,10 @@ config = {'arc': {'fill': '#30a2da'},
 }}
 
 # Y luego lo registro
+
 def my_theme(): 
   return {'config': config } 
 
 alt.themes.register('my_theme', my_theme) 
-
 alt.themes.enable('my_theme')
 ```
