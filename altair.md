@@ -1,19 +1,29 @@
 # Overview
 
-## Bar Chart
+## Line Bar
 
 ```python
+alt.Chart(trends).mark_line().encode(
+    x= 'yearmonth(date):T',
+    y="mean(value)",
+    color='search_term'
+).properties(  
+title="Titleeeee" 
+).interactive() 
 
-hist_brain = alt.Chart(brain).mark_bar().encode(
+```
+
+## Bar Chart
+```python
+
+alt.Chart(brain).mark_bar().encode(
     x=alt.X('Brain Weight', bin=alt.Bin(maxbins=50)),
     y= 'count()'
 ).interactive()
 ```
 
-```python
-
 ## Scatter Bar
-
+```python
 alt.Chart(brain).mark_circle().encode(
     x=alt.X('Body Weight', bin=alt.Bin(maxbins=50)),
     y= 'Brain Weight'
@@ -23,3 +33,4 @@ alt.Chart(brain).mark_circle().encode(
     title="RElacióón peso del cerebro y del cuerpo"
 )
 ```
+
