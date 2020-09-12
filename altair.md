@@ -50,8 +50,9 @@ color="search_term"
 ).properties(  
 title="Titleeeee" 
 ).interactive()
-```
+
 trend_bar|trend_line
+```
 
 ## Bar + Line with filter
 ```python
