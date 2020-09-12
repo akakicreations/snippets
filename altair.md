@@ -112,6 +112,33 @@ selection=select_date
 trend_line&mini_trend_line
 ```
 
+## Múltiple
+```python
+hist_brain = alt.Chart(brain).mark_bar().encode(
+    x=alt.X('Brain Weight', bin=alt.Bin(maxbins=50)),
+    y= 'count()'
+).interactive()
+
+hist_body = alt.Chart(brain).mark_bar().encode(
+    x=alt.X('Body Weight', bin=alt.Bin(maxbins=50)),
+    y= 'count()'
+).interactive()
+
+scatter_brain_body = alt.Chart(brain).mark_circle().encode(
+    x=alt.X('Body Weight', bin=alt.Bin(maxbins=50)),
+    y= 'Brain Weight'
+).interactive()
+
+(hist_brain|hist_body)&scatter_brain_body
+
+```
+
+scatter_brain_body = alt.Chart(brain).mark_circle().encode(
+    x=alt.X('Body Weight', bin=alt.Bin(maxbins=50)),
+    y= 'Brain Weight'
+).interactive()
+
+
 ## Complex Scatter
 ```python
 scatter_brain_body = alt.Chart(lifecountries).mark_circle().encode( 
