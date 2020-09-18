@@ -32,4 +32,16 @@ Inicial
 data_ana_playlist_means_songs100 = data_ana_playlist_songs100.mean()
 data_ana_playlist_means_songs100
 ```
-<img src="markdownmonstericon.png"/>
+<img src="trans_data1.png"/>
+
+Después
+```python
+data_ana_playlist_means_songs100 = data_ana_playlist_songs100.mean().reset_index()
+data_ana_playlist_means_songs100 = data_ana_playlist_means_songs100.pivot_table(columns='index',
+                                            index=data_ana_playlist_means_songs100.index//len(data_ana_playlist_means_songs100),
+                                            values=0).rename_axis(None, axis=1).rename(index={0: 'Media Top100 Pandemia'})
+
+data_ana_playlist_means_songs100
+```
+<img src="trans_data2.png"/>
+
