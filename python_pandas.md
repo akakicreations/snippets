@@ -43,5 +43,5 @@ data_ana_playlist_means_songs100 = data_ana_playlist_means_songs100.pivot_table(
 
 data_ana_playlist_means_songs100
 ```
-<img src="trans_data2.png"/>
+<img src="transdata2.png"/>
 
