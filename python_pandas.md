@@ -24,3 +24,12 @@ display(HTML('<img src onerror="{}">'.format(script)))
 
 set_background('honeydew')
 ```
+
+## Transformar dataframe
+
+Inicial
+```python
+data_ana_playlist_means_songs100 = data_ana_playlist_songs100.mean()
+data_ana_playlist_means_songs100
+```
+<img src="markdownmonstericon.png"/>
