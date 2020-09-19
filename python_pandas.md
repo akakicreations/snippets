@@ -45,3 +45,9 @@ data_ana_playlist_means_songs100
 ```
 <img src="transdata2.png"/>
 
+## Merge 3 varios dataframes
+
+```python
+dfs = [df0, df1, df2, dfN]
+df_final = reduce(lambda left,right: pd.merge(left,right,on='name'), dfs)
+```
