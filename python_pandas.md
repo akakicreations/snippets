@@ -48,6 +48,7 @@ data_ana_playlist_means_songs100
 ## Merge 3 varios dataframes
 
 ```python
+from functools import reduce
 dfs = [df0, df1, df2, dfN]
 df_final = reduce(lambda left,right: pd.merge(left,right,on='name'), dfs)
 ```
