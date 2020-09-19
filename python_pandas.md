@@ -51,3 +51,10 @@ data_ana_playlist_means_songs100
 dfs = [df0, df1, df2, dfN]
 df_final = reduce(lambda left,right: pd.merge(left,right,on='name'), dfs)
 ```
+
+## Concat various dataframes
+
+```python
+pdList = [df1, df2, ...]
+new_df = pd.concat(pdList)
+```
